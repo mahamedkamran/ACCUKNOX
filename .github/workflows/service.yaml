@@ -2,10 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: wisecow-service
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "external"
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-    - port: 4499        # The port the service exposes
-      targetPort: 4499  # The port the container listens on
+    - port: 4499
+      targetPort: 4499
   selector:
     app: wisecow
