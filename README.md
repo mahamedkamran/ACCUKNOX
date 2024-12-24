@@ -29,3 +29,6 @@ service:
 
 Load Balancer:
 ![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/LOAD_BALANCER.png)
+
+When you curl the DNS of the load balancer you will get the below output:
+![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/DNS_CURL.png)
