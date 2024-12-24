@@ -7,8 +7,11 @@
 ![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/Deployment_file.png)
 
 
-## 2. Service.yaml file:
+## 3. Service.yaml file:
 ![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/service_yaml.png)
+
+## 4. Upload in the github repository:
+![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/Github_directory_structure.png)
 ## Requirement
 1. Create Dockerfile for the image and corresponding k8s manifest to deploy in k8s env. The wisecow service should be exposed as k8s service.
 2. Github action for creating new image when changes are made to this repo
