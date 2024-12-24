@@ -1,22 +1,14 @@
-# Cow wisdom web server
+# STEPS
 
-## Prerequisites 
-
-```
-sudo apt install fortune-mod cowsay -y
-```
-
-## How to use? 
-
-1. Run `./wisecow.sh`
-2. Point the browser to server port (default 4499)
-
-## What to expect?
+## 1. Create the Dockerfile as below:
 ![wisecow](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/Dockerfile.png)
 
-# Problem Statement
-Deploy the wisecow application as a k8s app
+## 2. Deployment.yaml file:
+![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/Deployment_file.png)
 
+
+## 2. Service.yaml file:
+![](https://github.com/mahamedkamran/ACCUKNOX/blob/main/images/service_yaml.png)
 ## Requirement
 1. Create Dockerfile for the image and corresponding k8s manifest to deploy in k8s env. The wisecow service should be exposed as k8s service.
 2. Github action for creating new image when changes are made to this repo
