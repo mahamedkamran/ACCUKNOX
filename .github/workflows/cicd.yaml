@@ -33,6 +33,17 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Ensures all files are fetched
+
+      - name: Debug: Verify Repository Files
+        run: |
+          echo "Checking current directory:"
+          pwd
+          echo "Listing files in root directory:"
+          ls -al
+          echo "Listing files in k8s directory:"
+          ls -al k8s || echo "k8s directory not found!"
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
@@ -49,11 +60,6 @@ jobs:
       - name: Update kubeconfig for EKS
         run: |
           aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name accuknox
-
-      - name: Debug: Verify File Structure
-        run: |
-          echo "Listing repository files for debugging..."
-          ls -R
 
       - name: Deploy to EKS
         run: |
